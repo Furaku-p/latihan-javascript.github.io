@@ -1,0 +1,59 @@
+/* Layout */
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightblue;
+    font-family: Arial, sans-serif;
+}
+
+/* Kotak tengah */
+.container {
+    max-width: 500px;
+    background-color: white;
+    padding: 40px 60px;
+    border: 5px solid #333;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+h1 {
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+
+hr {
+    margin: 20px 0;
+    border: 1px solid #333;
+}
+
+/* Tombol */
+.button-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #0077cc;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 2px solid #005fa3;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Tombol Animasi*/
+.btn:hover {
+    background-color: #005fa3;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
