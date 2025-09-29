@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Smartphone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <button class="backButton" onclick="goBack()">
+                ← Kembali ke Home</button>
+            <h1>Filter Perangkat Elektronik</h1>
+            <p>Temukan perangkat yang sesuai dengan kebutuhan Anda</p>
+        </header>
+
+        <div class="filter-section">
+            <div class="filter-group">
+                <label for="jenis">Jenis Perangkat</label>
+                <select id="jenis" class="dropdown">
+                    <option value="">Pilih Jenis</option>
+                    <option value="smartphone">Smartphone</option>
+                    <option value="tablet">Tablet</option>
+                    <option value="laptop">Laptop</option>
+                    <option value="smartwatch">Smart Watch</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="merk">Merk</label>
+                <select id="merk" class="dropdown" disabled>
+                    <option value="">Pilih Merk</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="model">Model</label>
+                <select id="model" class="dropdown" disabled>
+                    <option value="">Pilih Model</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="results-section" id="results">
+            <h3>Hasil Pilihan:</h3>
+            <div class="result-card" id="resultCard">
+                <p>Silakan pilih filter di atas untuk melihat hasil</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

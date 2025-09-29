@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Mahasiswa Informatika</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-card">
+            <div class="form-header">
+                <h2>Data Mahasiswa Informatika</h2>
+                <p>Silakan lengkapi data diri Anda di bawah ini</p>
+            </div>
+            
+            <form id="studentForm" method="post" action="data.html">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="naleng">Nama Lengkap <span class="required">*</span></label>
+                        <input type="text" id="naleng" name="naleng" required aria-describedby="naleng-error">
+                        <span class="error-message" id="naleng-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="napang">Nama Panggilan</label>
+                        <input type="text" id="napang" name="napang">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nrp">NRP <span class="required">*</span></label>
+                        <input type="text" id="nrp" name="nrp" pattern="[0-9]{10}" maxlength="10" required aria-describedby="nrp-error">
+                        <span class="error-message" id="nrp-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="notelp">No. Telepon <span class="required">*</span></label>
+                        <input type="text" id="notelp" name="notelp" pattern="[0-9]{10,13}" minlength="10" maxlength="13" required aria-describedby="notelp-error">
+                        <span class="error-message" id="notelp-error"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Jurusan <span class="required">*</span></label>
+                    <div class="radio-container">
+                        <label class="radio-label">
+                            <input type="radio" name="jurusan" value="tinf" required aria-describedby="jurusan-error">
+                            <span class="radio-custom"></span>
+                            Teknik Informatika
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="jurusan" value="rka">
+                            <span class="radio-custom"></span>
+                            Rekayasa Kecerdasan Artifisial
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="jurusan" value="rpl">
+                            <span class="radio-custom"></span>
+                            Rekayasa Perangkat Lunak
+                        </label>
+                    </div>
+                    <span class="error-message" id="jurusan-error"></span>
+                </div>
+
+                <div class="form-group">
+                    <label>Bahasa yang Dikuasai:</label>
+                    <div class="checkbox-container">
+                        <div class="checkbox-column">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="bprogram[]" value="c"> C
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="bprogram[]" value="cpp"> C++
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="bprogram[]" value="python"> Python
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="bprogram[]" value="java"> Java
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="bprogram[]" value="csharp"> C#
+                            </label>
+                        </div>
+                        <div class="checkbox-column">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="bprogram[]" value="javascript"> JavaScript
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="bprogram[]" value="ruby"> Ruby
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="bprogram[]" value="php"> PHP
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="bprogram[]" value="kotlin"> Kotlin
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="bprogram[]" value="rust"> Rust
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Simpan Data</button>
+                    <button type="reset" class="btn btn-secondary">Reset Form</button>
+                </div>
+            </form>
+
+            <div class="form-footer">
+                <a href="../index.html" id="backButton" class="back-link">← Kembali ke Home</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

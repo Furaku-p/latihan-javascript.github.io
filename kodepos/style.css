@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.search-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding-bottom: 8px;
+    position: relative;
+}
+
+.backButton {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: var(--primary-color, #2196F3);
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.backButton:hover {
+    background: var(--primary-dark, #1976D2);
+    transform: translateX(-3px);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 24px;
+    color: #2c5aa0;
+    font-size: 28px;
+}
+
+.search-box {
+    width: 100%;
+    padding: 16px;
+    font-size: 16px;
+    border: 2px solid #e1e5e9;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.search-box:focus {
+    outline: none;
+    border-color: #2c5aa0;
+    box-shadow: 0 0 0 3px rgba(44, 90, 160, 0.1);
+}
+
+.search-box::placeholder {
+    color: #999;
+}
+
+.results-container {
+    border: 1px solid #e1e5e9;
+    border-radius: 8px;
+    max-height: 500px;
+    overflow-y: auto;
+    background: white;
+}
+
+.result-item {
+    padding: 16px;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.result-item:hover {
+    background-color: #f8fafc;
+}
+
+.result-item:last-child {
+    border-bottom: none;
+}
+
+.result-item.active {
+    background-color: #e3f2fd;
+    border-left: 4px solid #2c5aa0;
+}
+
+.result-item.code {
+    transition: color 0.3s ease;
+}
+
+.code {
+    font-weight: bold;
+    color: #2c5aa0;
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+.village {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 2px;
+}
+
+.district, .regency, .province {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+.coordinates {
+    color: #888;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.no-results {
+    padding: 40px 20px;
+    text-align: center;
+    color: #666;
+    font-style: italic;
+}
+
+.results-count {
+    margin-bottom: 12px;
+    color: #666;
+    font-size: 14px;
+    text-align: right;
+}
+
+/* Scrollbar styling */
+.results-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.results-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.results-container::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+}
+
+.results-container::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .search-box::placeholder {
+        font-size: 14px;
+    }
+
+    .search-container {
+        margin: 20px;
+        padding: 16px;
+    }
+
+    .backButton {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 12px;
+        transform: none;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+    
+    .search-box {
+        padding: 14px;
+    }
+    
+    .result-item {
+        padding: 12px;
+    }
+}

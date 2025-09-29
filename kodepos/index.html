@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pencarian Kode Pos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="search-container">
+        <button class="backButton" onclick="goBack()">
+        ← Kembali ke Home</button>
+        <h1>🔍 Pencarian Kode Pos</h1>
+        <input type="text" id="searchInput" class="search-box" 
+            placeholder="Cari berdasarkan desa, kecamatan, kabupaten, atau kode pos...">
+        <div id="results" class="results-container"></div>
+    </div>
+
+    <script src="kodepos-data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
